@@ -5,7 +5,10 @@
 	Rango
 {% endblock %}
 
+
+
 {% block body_block %}
+	<p>visits: {{visits}}</p>
 	{% if user.is_authenticated %}
 		howdy {{ user.username }}!
 	{% else %}
@@ -35,6 +38,7 @@
 		<strong>No pages currently in category.</strong>
 	{% endif %}
 	
-	<img src="{% static "images/cat.jpg" %}" alt="Picture of Rango" />
+	<img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+	<img src="{{MEDIA_URL}}cat.jpg"/>
 
 {% endblock %}
