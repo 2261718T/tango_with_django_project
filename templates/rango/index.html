@@ -2,10 +2,15 @@
 {% load staticfiles %}
 
 {% block title_block %}
-	This is the new Index page!
+	Rango
 {% endblock %}
 
 {% block body_block %}
+	{% if user.is_authenticated %}
+		howdy {{ user.username }}!
+	{% else %}
+		hey there partner!
+	{% endif %}
 	{% if categories %}
 		<h1>Most liked categories</h1>
 		<ul>

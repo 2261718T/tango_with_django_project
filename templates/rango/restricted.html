@@ -1,0 +1,19 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+	Secret!
+{% endblock %}
+
+{% block body_block %}
+	<h1>Rango says...</h1>
+	<div>
+		Oh no you have discovered my secret cat collection! <br />
+		<strong>{{ message }}</strong><br />
+	</div>
+	<div>
+		<a href="/rango/">Index</a><br />
+		<img src="{% static "images/tank.jpg"%}" alt="Picture of a dino" />
+		<img src="{{MEDIA_URL}}dog.jpg"/>
+	</div>
+{% endblock %}
